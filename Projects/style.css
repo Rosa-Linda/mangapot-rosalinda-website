@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+.main-content {
+      padding: 20px;
+      text-align: center;
+      color: white;
+  }
+
+  .mcontent {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.button-container {
+  position: relative;
+}
+
+.button {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0px;
+  cursor: pointer;
+  outline: 0px;
+  padding: 0 2px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.backdrop {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background-color: rgb(36, 33, 228);
+  z-index: -1;
+  top: 42%;
+  left: 50%;
+  border-radius: 15px;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all ease-in-out 0.5s;
+}
+
+.button:hover + .backdrop {
+  top: 48%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transform: rotate(15deg) translateX(-50%) translateY(-50%);
+}
+
+.button:active, .button:active + .backdrop {
+  box-shadow: none;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
